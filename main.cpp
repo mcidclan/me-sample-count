@@ -46,7 +46,6 @@ int main(int argc, char **argv) {
     /*
     // not necessary in our case
     sceKernelDcacheWritebackInvalidateAll();
-    asm("sync");
     */
     sceCtrlPeekBufferPositive(&ctl, 1);
     pspDebugScreenSetXY(0, 1);
@@ -56,7 +55,6 @@ int main(int argc, char **argv) {
   
   stop = true;
   sceKernelDcacheWritebackInvalidateAll();
-  asm("sync");
   
   pspDebugScreenClear();
   pspDebugScreenSetXY(0, 1);
